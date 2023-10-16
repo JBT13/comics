@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <table align="center">
+        <form action="/login" method="POST">
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td> 
+                    <input type="email" name="email" id="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">LOGIN</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+    
+</body>
+</html>
