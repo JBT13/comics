@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    /* Center the container horizontally */
+    justify-content: center;
+    /* Center the container vertically */
+    align-items: center;
+    /* Set the width of the container */
+    width: 1500px;
+    /* Set the height of the container */
+    height: 650px;
+    /* Center the container relative to the body */
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Set the background color of the container */
+    background-color: rgb(70, 70, 64);
+    /* Allow items to wrap to the next line if necessary */
+    flex-wrap: wrap;
+  }
+  
+  /* Set the width and height of the images */
+  img {
+    width: 100px;
+    height: 100px;
+    /* Set the margin around the images */
+    margin: 10px;
+    /* Set the border radius to make the images circular */
+    border-radius: 50%;
+    /* Set the border width and color */
+    border: 2px solid black;
+    /* Add a box shadow to the images */
+    box-shadow: 0 0 10px 0 black;
+  }

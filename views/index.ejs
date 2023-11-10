@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  
-  <div>
-      <% if (!isLoggedIn) { %>
-        <table class="login">
-          <tr>
-            <th><a href="/register">REGISTER</a></th>
-            <th><a href="/login">LOGIN</a></th>
-          </tr>
-        </table>
-    <% } %>
-  </div>
+
   <%- include('navbar.ejs') %>
-  <h1><%= user.firstName %></h1>
+  <div>
+    <% if (!isLoggedIn) { %>
+      <table class="login">
+        <tr>
+          <th><a href="/register">REGISTER</a></th>
+          <th><a href="/login">LOGIN</a></th>
+        </tr>
+      </table>
+  <% } %>
+  </div>
+  <h1><%= user.firstName %> <%= user.lastName %></h1>
   <table align="center">
     <tr>
       <td><a href="/marvel"><img src="images/amazing.jpg" alt=""></a></td>

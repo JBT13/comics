@@ -42,3 +42,8 @@
 ('The Punisher: Welcome Back', 978-0785157162, [image], 'The Punisher returns to New York City to wage his one-man war on crime.', 12, 1),
 ('Thor: God of Thunder', 978-0785168427, [image], 'Thor faces an ancient enemy known as Gorr the God Butcher, who seeks to exterminate all gods across time and space.', 11, 1), 
 ('Marvel Comics', 978-0785158688, [image], 'The first issue of Marvel Comics, featuring the debut of characters such as the Human Torch and Namor the Sub-Mariner.', 1, 1),
+
+
+('The Bell-Ringer',NULL,NULL,'A man who rings the church bell every hour and is mocked by the townspeople for being simple-minded. He saves them from an alien invasion by ringing the bell at the right time, causing the aliens to flee in pain'),
+('Man in the Mummy Case',NULL,NULL,'A thief who steals a mummy case from a museum, hoping to find treasure inside. He opens the case and finds a living alien, who captures him and takes him to his home planet as a specimen.'),
+('The Time Traveler',NULL,NULL,'He is a scientist who invents a time machine and travels back to the origin of life on Earth. He witnesses a primitive creature emerging from the primordial soup and decides to examine it.'),

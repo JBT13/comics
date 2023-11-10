@@ -1,5 +1,5 @@
 CREATE TABLE publishers (
-  publisherId INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255) NOT NULL UNIQUE 
 );
 
@@ -12,13 +12,12 @@ CREATE TABLE comics (
   pageCount INTEGER NOT NULL,
   publicationDate DATE NOT NULL,
   issueNumber INTEGER NOT NULL,
-  publisherId INTEGER,
-  FOREIGN KEY (publisherId) REFERENCES publishers(publisherId)
+  price INTEGER NOT NULL
 );
 
 CREATE TABLE genres (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL UNIQUE,
   description VARCHAR(255)
 );
 
@@ -29,31 +28,39 @@ CREATE TABLE countries (
 
 CREATE TABLE roles (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(60) NOT NULL,
+  name VARCHAR(255) NOT NULL UNIQUE,
   description VARCHAR(255)
 );
 
 CREATE TABLE people (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  firstName VARCHAR(60),
-  lastName VARCHAR(60),
+  firstName VARCHAR(255) NOT NULL,
+  lastName VARCHAR(255) NOT NULL,
   image VARCHAR(255),
   birth DATE
 );
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  heroName VARCHAR(60) NOT NULL,
-  firstName VARCHAR(60),
-  lastName VARCHAR(60),
+  heroName VARCHAR(255),
+  firstName VARCHAR(255),
+  lastName VARCHAR(255),
   image VARCHAR(255),
-  description VARCHAR(255)
+  description TEXT
 );
 
 CREATE TABLE series (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255) NOT NULL,
-  description VARCHAR(255)
+  description TEXT
+);
+
+CREATE TABLE comicPublisher (
+  comicId INTEGER,
+  publisherId INTEGER,
+  PRIMARY KEY (comicId, publisherId),
+  FOREIGN KEY (comicId) REFERENCES comics(id),
+  FOREIGN KEY (publisherId) REFERENCES publishers(id)
 );
 
 CREATE TABLE comicCountry (
@@ -95,7 +102,7 @@ CREATE TABLE comicPeopleRole (
   PRIMARY KEY (comicId, roleId, peopleId),
   FOREIGN KEY (comicId) REFERENCES comics(id),
   FOREIGN KEY (peopleId) REFERENCES people(id),
-  FOREIGN KEY (roleId) REFERENCES role(id)
+  FOREIGN KEY (roleId) REFERENCES roles(id)
 );
 
 CREATE TABLE peopleCountry (

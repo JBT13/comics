@@ -1,7 +1,7 @@
 import express from 'express';
 import path from "path";
 import { fileURLToPath } from "url";
-import { selectUsers } from "../db/read/read.js";
+import { selectUsers } from "../db/read/users.js";
 
 const router = express.Router();
 

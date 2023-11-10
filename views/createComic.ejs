@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/createComic.css">
+</head>
+<body>
+    <h1>Create Comic</h1>
+  <form action="/createComic" method="POST" >
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title">
+    <br>
+    <label for="ISBN">ISBN:</label>
+    <input type="text" id="ISBN" name="ISBN">
+    <br>
+    <label for="image">Image:</label>
+    <input type="text" id="image" name="image">
+    <br>
+    <label for="summary">Summary:</label>
+    <input type="text" id="summary" name="summary">
+    <br>
+    <label for="pageCount">PageCount:</label>
+    <input type="text" id="pageCount" name="pageCount">
+    <br>
+    <label for="publicationDate">publicationDate:</label>
+    <input type="text" id="publicationDate" name="publicationDate">
+    <br>
+    <label for="issueNumber">issueNumber:</label>
+    <input type="text" id="issueNumber" name="issueNumber">
+    <br>
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price">
+    <br>
+
+    <select name="genres" id="genres" multiple>
+    <% for (let i = 0; i < genres.length; i++) { %>
+      <option value="<%= genres[i].id %>"><%= genres[i].name %></option>
+    <% } %>
+    </select>
+    <br>
+
+    <br>
+
+    <select name="characters" id="character" multiple>
+    <% for (let i = 0; i < characters.length; i++) { %>
+      <option value="<%= characters[i].id %>"><%= characters[i].heroName %> <%= characters[i].firstName %> <%= characters[i].lastName %></option>
+    <% } %>
+    </select>
+    <br>
+
+    <br>
+
+      <select name="countries" id="countries" multiple>
+        <% for (let i = 0; i < countries.length; i++) { %>
+          <option value="<%= countries[i].id %>"><%= countries[i].name %></option>
+        <% } %>
+      </select>
+    <br>
+
+    <br>
+
+    <select name="publishers" id="publishers" multiple>
+    <% for (let i = 0; i < publishers.length; i++) { %>
+      <option value="<%= publishers[i].id %>"><%= publishers[i].name %></option>
+    <% } %>
+    </select>
+    <br>
+
+    <br>
+
+    <select name="series" id="series" multiple>
+    <% for (let i = 0; i < series.length; i++) { %>
+      <option value="<%= series[i].id %>"><%= series[i].name %></option>
+    <% } %>
+    </select>
+    <br>
+
+    <br>
+    <div name="coloristDiv" id="coloristDiv">
+      Colorist:
+      <select name="colorist" id="colorist" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+      <div name="writersDiv" id="writersDiv">
+        Writers:
+        <select name="writer" id="writer" multiple>
+          <% for (let i = 0; i < people.length; i++) { %>
+            <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+          <% } %>
+        </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="assistantEditorDiv" id="assistantEditorDiv">
+      Assistant Editor:
+      <select name="assistantEditor" id="assistantEditor" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+
+
+    <br>
+
+    <br>
+    <div name="designerDiv" id="designerDiv">
+      Designer:
+      <select name="designer" id="designer" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="editorDiv" id="editorDiv">
+      Editor:
+      <select name="editor" id="editor" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="editorialAssistantDiv" id="editorialAssistantDiv">
+      Editorial Assistant:
+      <select name="editorialAssistant" id="editorialAssistant" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="illustratorDiv" id="illustratorDiv">
+      Illustrator:
+      <select name="illustrator" id="illustrator" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="inkerDiv" id="inkerDiv">
+      Inker:
+      <select name="inker" id="inker" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="lettererDiv" id="lettererDiv">
+      Letterer:
+      <select name="letterer" id="letterer" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="mangakaDiv" id="mangakaDiv">
+      Mangaka:
+      <select name="mangaka" id="mangaka" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <br>
+    <div name="typesetterDiv" id="typesetterDiv">
+      Typesetter:
+      <select name="typesetter" id="typesetter" multiple>
+        <% for(let i = 0; i < people.length; i++) { %>
+          <option value="<%= people[i].id %>"><%= people[i].firstName %> <%= people[i].lastName %></option>
+        <% } %>
+      </select>
+    </div> 
+
+    <br>
+
+    <button type="submit">Create comic</button>
+  </form>
+</body>
+</html>

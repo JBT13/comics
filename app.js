@@ -10,6 +10,7 @@ import { router as registerRouter } from './routes/register.js';
 import { router as mangaRouter } from './routes/manga.js';
 import { router as marvelRouter } from './routes/marvel.js';
 import { router as dcRouter } from './routes/dc.js';
+import { router as createComicRouter } from './routes/createComic.js';
 
 
 const app = express();
@@ -40,7 +41,7 @@ app.use('/register', registerRouter);
 app.use('/manga', mangaRouter);
 app.use('/marvel', marvelRouter);
 app.use('/dc', dcRouter);
-
+app.use('/createComic', createComicRouter);
 
 
 // errors: page not found

@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+    <%- include('navbar.ejs') %>
+    <div>
+        <% if (!isLoggedIn) { %>
+          <table class="login">
+            <tr>
+              <th><a href="/register">REGISTER</a></th>
+              <th><a href="/login">LOGIN</a></th>
+            </tr>
+          </table>
+      <% } %>
+    </div>
+    <h1><%= user.firstName %></h1>
 </body>
 </html>
