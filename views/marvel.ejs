@@ -20,50 +20,13 @@
       <% } %>
     </div>
     <div class="container">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai03.jpg" alt="">
-      <img src="images/ai04.jpg" alt="">
-      <img src="images/ai01.jpg" alt="">
-      <img src="images/ai02.jpg" alt="">
+      <form action="/marvel">
+        <td>
+          <% for( let i = 0; i < comics.length; i++ ) { %>
+            <button value="<%=  comics[i].id  %>"><img src="<%= comics[i].image %>" alt=""></button>
+          <% } %>
+        </td>
+      </form>
     </div>
     <h1><%= user.firstName %></h1>
 </body>
