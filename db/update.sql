@@ -1,0 +1,1 @@
+UPDATE comics SET title = 'Attack on Titan 6' WHERE id = 9;

@@ -12,6 +12,7 @@ import { createComic } from '../db/create/comics.js';
 import { createComicGenre } from '../db/create/comicGenre.js';
 import { createComicCharacter } from '../db/create/comicCharacter.js';
 import { createComicCountries } from '../db/create/comicCountry.js';
+import { createComicPublisher } from '../db/create/comicPublisher.js';
 import { createComicPeopleRoleWriter } from '../db/create/roles/comicPeopleRoleWriter.js';
 import { createComicPeopleRoleAssistantEditor } from '../db/create/roles/comicPeopleRoleAssistantEditor.js';
 import { createComicPeopleRoleColorist } from '../db/create/roles/comicPeopleRoleColorist.js';
@@ -43,7 +44,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
     const lastId = createComic(dbFile, req.body.title, req.body.ISBN, req.body.image, req.body.summary, req.body.pageCount, req.body.publicationDate, req.body.issueNumber, req.body.price );
     
     if (req.body.genres != null){
@@ -68,6 +69,12 @@ router.post('/', (req, res) => {
     const series = req.body.series;
     for (let i = 0; i < series.length; i++) {
       createComicSerie(dbFile, lastId, series[i])
+    }}
+
+    if (req.body.publishers != null){
+    const publishers = req.body.publishers;
+    for (let i = 0; i < publishers.length; i++) {
+      createComicPublisher(dbFile, lastId, publishers[i])
     }}
 
     if (req.body.colorist != null){
@@ -136,11 +143,7 @@ router.post('/', (req, res) => {
       createComicPeopleRoleTypesetter(dbFile, lastId, typesetter[i], 1);
     }}
 
-    /*
-    const publishers = req.body.publishers;
-    for (let i = 0; i < publishers.lenght; i++) {
-      createComicPublisher(dbFile, lastId, publishers[i])
-    } */
+    console.log(req.body)
 
     res.redirect('/createComic')
   });

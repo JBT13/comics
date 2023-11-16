@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/series.css">
+    <link rel="stylesheet" href="css/image.css">
 </head>
 <body>
     <%- include('navbar.ejs') %>
@@ -17,6 +18,15 @@
             </tr>
           </table>
       <% } %>
+    </div>
+    <div class="container">
+      <form action="/dc">
+        <td>
+          <% for( let i = 0; i < comics.length; i++ ) { %>
+            <button value="<%=  comics[i].id  %>"><img src="<%= comics[i].image %>" alt=""></button>
+          <% } %>
+        </td>
+      </form>
     </div>
     <h1><%= user.firstName %></h1>
 </body>

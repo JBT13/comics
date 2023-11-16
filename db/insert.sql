@@ -52,9 +52,9 @@ INSERT INTO roles (name, description) VALUES
 
 
 INSERT INTO comics (title, ISBN, image, summary, pageCount, publicationDate, issueNumber, price) VALUES 
-('Amazing Fantasy', '978-0785115650', 'spider-man/amazingFantasy.jpg', 'The origin story of Spider-Man, who gets bitten by a radioactive spider and learns a hard lesson about responsibility.', 36, 1962-08-01, 15, 40), 
-('Amazing Spider-Man: The Night Gwen Stacy Died', '978-0785167277', 'spider-man/theNightGwenStacyDied.jpg', 'Spider-Man faces a tragic loss when his girlfriend Gwen Stacy is killed by the Green Goblin.', 64, 1973-06-01, 122, 40), 
-('Spider-Man: The Clone Saga', '978-0785148053', 'spider-man/theCloneSaga.jpg', 'Spider-Man faces a crisis of identity when he learns that he may be a clone of the original Peter Parker.', 144, 2010-03-01, 6, 40);
+('Amazing Fantasy', '978-0785115650', '/images/spider-man/amazingFantasy.jpg', 'The origin story of Spider-Man, who gets bitten by a radioactive spider and learns a hard lesson about responsibility.', 36, 1962-08-01, 15, 40), 
+('Amazing Spider-Man: The Night Gwen Stacy Died', '978-0785167277', '/images/spider-man/theNightGwenStacyDied.jpg', 'Spider-Man faces a tragic loss when his girlfriend Gwen Stacy is killed by the Green Goblin.', 64, 1973-06-01, 122, 40), 
+('Spider-Man: The Clone Saga', '978-0785148053', '/images/spider-man/theCloneSaga.jpg', 'Spider-Man faces a crisis of identity when he learns that he may be a clone of the original Peter Parker.', 144, 2010-03-01, 6, 40);
 
 INSERT INTO genres (name, description) VALUES 
 ('Superhero', 'This genre features characters who have extraordinary abilities or powers, often using them to fight crime, evil, or injustice.'), 
@@ -143,9 +143,9 @@ Peter Parker: The Spectacular Spider-Man (2017-2018)
 
 
 INSERT INTO characters (heroName,firstName, lastName, description) VALUES
-('Circus of Crime',NULL,NULL,'They would give a performance before a large audience. At some point the Ringmaster would use the powerful mind-control device concealed in his hat to put the audience into a trance. The Circus members then robbed the audience, who would remember nothing about the thefts when the Ringmaster released them from the trance and the performance continued.')
-('Doctor Doom','Victor von','Doom','Doctor Doom is a Latverian politician who serves as the Monarch and Supreme Leader for the Kingdom of Latveria. He was scarred from an accident and wears an iron mask and armor to hide his true face. He is considered one of the most brilliant minds and scientists on the planet Earth. He is also a sorcerer with skills in magic matching the most powerful beings in the Universe, making him a potential candidate for Sorcerer Supreme.He hopes to bring order and betterment to humanity through world conquest.')
-('Living Brain (Earth-616)',NULL,NULL,'The Living Brain, soon after its creation, was brought to Midtown High School by its creator, Dr. Petty, as a part of a demonstration of its ability to solve any problem.')
+('Circus of Crime',NULL,NULL,'They would give a performance before a large audience. At some point the Ringmaster would use the powerful mind-control device concealed in his hat to put the audience into a trance. The Circus members then robbed the audience, who would remember nothing about the thefts when the Ringmaster released them from the trance and the performance continued.'),
+('Doctor Doom','Victor von','Doom','Doctor Doom is a Latverian politician who serves as the Monarch and Supreme Leader for the Kingdom of Latveria. He was scarred from an accident and wears an iron mask and armor to hide his true face. He is considered one of the most brilliant minds and scientists on the planet Earth. He is also a sorcerer with skills in magic matching the most powerful beings in the Universe, making him a potential candidate for Sorcerer Supreme.He hopes to bring order and betterment to humanity through world conquest.'),
+('Living Brain (Earth-616)',NULL,NULL,'The Living Brain, soon after its creation, was brought to Midtown High School by its creator, Dr. Petty, as a part of a demonstration of its ability to solve any problem.'),
 ('Doctor Strange','Stephen','Strange','Dr. Stephen Strange,a.k.a. Doctor Strange, was the Sorcerer Supreme for Earth-616. Strange was once a brilliant but arrogant Neurosurgeon, until a car accident crippled his hands.When modern medicine failed him, he embarked on a journey to Kamar-Taj in Tibet, where he was trained by the Ancient One. He healed his hands and learned more about Magic, eventually becoming a Master of the Mystic Arts.')
 
 
@@ -266,6 +266,13 @@ INSERT INTO series(name, description) VALUES
 INSERT INTO series(name, description) VALUES 
 ('Attack on Titan', 'A Japanese manga and anime series that depicts a world where humans are threatened by giant humanoids called Titans. The story follows Eren Yeager, who inherits the power of the Attack Titan, a special Titan that can see into the future and connect with other Titan holders. Eren decides to use his power to destroy humanity, believing that they are the cause of the Titans suffering.');
 
+
+INSERT INTO series(name, description) VALUES 
+('Manga', 'A type of Japanese comic book or graphic novel that is usually serialized and has a distinctive art style.')
+
+
+INSERT INTO series(name, description) VALUES 
+('DC', 'A comic book publisher that features a shared universe of superheroes, villains, and other characters.')
 
 INSERT INTO comicCountry (comicId, countryId) VALUES
 (1,1),(2,1),(3,1)

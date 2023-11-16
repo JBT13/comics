@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(122, 127, 131);
+}
+h1{
+    position: absolute; right:10px; bottom:15px;
+}
+div{
+    position: absolute; left:10px; bottom:15px;
+}
+
+img:hover{
+    transform : scale(1.1);
+    filter: brightness(70%);
+}
+
+.login tr  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(70, 70, 64);
+}
+.login tr a {
+display: block;
+color: rgb(255, 255, 255);
+padding: 14px 90px;
+text-decoration: none;
+ }
+
+.login tr a:hover {
+    background-color: rgb(110, 79, 79);
+}

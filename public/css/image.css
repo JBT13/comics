@@ -33,4 +33,11 @@
     border: 2px solid black;
     /* Add a box shadow to the images */
     box-shadow: 0 0 10px 0 black;
+    background-color: white;
+    padding: 5px 5px 5px ;
+  }
+  button{
+    background-color: rgb(70, 70, 64);
+    box-shadow: 0;
+    border: 0;
   }
