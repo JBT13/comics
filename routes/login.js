@@ -6,7 +6,7 @@ import { readUser } from '../db/read/user.js';
 
 const router = express.Router();
 
-const dbFile = path.join(fileURLToPath(new URL('.', import.meta.url)), '../db/users.db');
+const dbFile = path.join(fileURLToPath(new URL('.', import.meta.url)), '../db/comics.db');
 
 // get login page
 router.get('/', (req, res) => {
@@ -24,7 +24,6 @@ router.post('/', (req, res) => {
 		if (passwordMatch) {
 			req.session.user = user;
 			req.session.isLoggedIn = true;
-
 			res.redirect('/');
 			return;
 		

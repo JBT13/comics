@@ -44,7 +44,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    console.log(req.body)
     const lastId = createComic(dbFile, req.body.title, req.body.ISBN, req.body.image, req.body.summary, req.body.pageCount, req.body.publicationDate, req.body.issueNumber, req.body.price );
     
     if (req.body.genres != null){
@@ -80,70 +79,68 @@ router.post('/', (req, res) => {
     if (req.body.colorist != null){
     const colorist = req.body.colorist;
     for (let i = 0; i < colorist.length; i++) {
-      createComicPeopleRoleColorist(dbFile, lastId, colorist[i], 5);
+      createComicPeopleRoleColorist(dbFile, lastId, colorist, 5);
     }}
 
     if (req.body.writer != null){
     const writer = req.body.writer;
     for (let i = 0; i < writer.length; i++) {
-      createComicPeopleRoleWriter(dbFile, lastId, writer[i], 9);
+      createComicPeopleRoleWriter(dbFile, lastId, writer, 9);
     }}
 
     if (req.body.assistantEditor != null){
     const assistantEditor = req.body.assistantEditor;
     for (let i = 0; i < assistantEditor.length; i++) {
-      createComicPeopleRoleAssistantEditor(dbFile, lastId, assistantEditor[i], 4);
+      createComicPeopleRoleAssistantEditor(dbFile, lastId, assistantEditor, 4);
     }}
 
     if (req.body.designer != null){
     const designer = req.body.designer;
     for (let i = 0; i < designer.length; i++) {
-      createComicPeopleRoleDesigner(dbFile, lastId, designer[i], 8);
+      createComicPeopleRoleDesigner(dbFile, lastId, designer, 8);
     }}
 
     if (req.body.editor != null){
     const editor = req.body.editor;
     for (let i = 0; i < editor.length; i++) {
-      createComicPeopleRoleEditor(dbFile, lastId, editor[i], 10);
+      createComicPeopleRoleEditor(dbFile, lastId, editor, 10);
     }}
 
     if (req.body.editorialAssistant != null){
     const editorialAssistant = req.body.editorialAssistant;
     for (let i = 0; i < editorialAssistant.length; i++) {
-      createComicPeopleRoleEditorialAssistant(dbFile, lastId, editorialAssistant[i], 2);
+      createComicPeopleRoleEditorialAssistant(dbFile, lastId, editorialAssistant, 2);
     }}
 
     if (req.body.illustrator != null){
     const illustrator = req.body.illustrator;
     for (let i = 0; i < illustrator.length; i++) {
-      createComicPeopleRoleIllustrator(dbFile, lastId, illustrator[i], 3);
+      createComicPeopleRoleIllustrator(dbFile, lastId, illustrator, 3);
     }}
 
     if (req.body.inker != null){
     const inker = req.body.inker;
     for (let i = 0; i < inker.length; i++) {
-      createComicPeopleRoleInker(dbFile, lastId, inker[i], 6);
+      createComicPeopleRoleInker(dbFile, lastId, inker, 6);
     }}
 
     if (req.body.letterer != null){
     const letterer = req.body.letterer;
     for (let i = 0; i < letterer.length; i++) {
-      createComicPeopleRoleLetterer(dbFile, lastId, letterer[i], 7);
+      createComicPeopleRoleLetterer(dbFile, lastId, letterer, 7);
     }}
 
     if (req.body.mangaka != null){
     const mangaka = req.body.mangaka;
     for (let i = 0; i < mangaka.length; i++) {
-      createComicPeopleRoleMangaka(dbFile, lastId, mangaka[i], 11);
+      createComicPeopleRoleMangaka(dbFile, lastId, mangaka, 11);
     }}
 
     if (req.body.typesetter != null){
     const typesetter = req.body.typesetter;
     for (let i = 0; i < typesetter.length; i++) {
-      createComicPeopleRoleTypesetter(dbFile, lastId, typesetter[i], 1);
+      createComicPeopleRoleTypesetter(dbFile, lastId, typesetter, 1);
     }}
-
-    console.log(req.body)
 
     res.redirect('/createComic')
   });

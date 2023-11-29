@@ -223,7 +223,16 @@ INSERT INTO characters(heroName, firstName , lastName, description) VALUES
 (NULL, 'Mei Mei', NULL, 'Mei Mei is a professional Jujutsu Sorcerer who uses crows as her Shikigami and is obsessed with money.'),
 (NULL, 'Choso', NULL, 'Choso is one of the Cursed Womb: Death Paintings who can manipulate blood and considers Yuji Itadori as his younger brother.'),
 (NULL, 'Uraume', NULL, 'Uraume is a mysterious Curse User who is loyal to Kenjaku and can manipulate ice and wind.'),
-(NULL, 'Yuki', 'Tsukumo', 'Yuki Tsukumo is a Jujutsu Sorcerer who travels around the world and is interested in finding a way to end the Jujutsu system.')
+(NULL, 'Yuki', 'Tsukumo', 'Yuki Tsukumo is a Jujutsu Sorcerer who travels around the world and is interested in finding a way to end the Jujutsu system.'),
+(NULL, 'Kasumi', 'Miwa', 'Kasumi Miwa is a Jujutsu Sorcerer from Kyoto Jujutsu High. She is a skilled swordswoman who uses a katana as her weapon. She is loyal to her teacher, Kiyotaka Ijichi, and respects Satoru Gojo.'),
+(NULL, 'Utahime', 'Iori', 'Utahime Iori is a Jujutsu Sorcerer and a teacher at Kyoto Jujutsu High. She is a calm and composed woman who can use sound-based techniques. She is also the childhood friend of Kento Nanami and Mei Mei.'),
+(NULL, 'Naobito', 'Zenin', 'Naobito Zenin is the head of the Zenin family, one of the three major clans of Jujutsu Sorcerers. He is a powerful and arrogant man who can manipulate time and space. He is the father of Maki and Mai Zenin, and the uncle of Megumi Fushiguro.'),
+(NULL, 'Mai', 'Zenin', 'Mai Zenin is a Jujutsu Sorcerer from the Zenin family and a student at Kyoto Jujutsu High. She is the twin sister of Maki Zenin, whom she despises for leaving the family. She uses a revolver as her weapon and can create one bullet per day using her cursed energy.'),
+(NULL, 'Noritoshi', 'Kamo', 'Noritoshi Kamo is a Jujutsu Sorcerer and a student at Kyoto Jujutsu High. He is the heir of the Kamo family, another one of the three major clans of Jujutsu Sorcerers. He can manipulate blood and use it as a weapon or a medium for his techniques.'),
+(NULL, 'Dagon', NULL, 'Dagon is a Special Grade Cursed Spirit who can create a domain that resembles an ocean. He is one of the allies of Suguru Geto and Mahito, and participates in the Shibuya Incident. He is defeated by Toji Fushiguro.'),
+(NULL, 'Hakari', 'Kinji', 'Hakari Kinji is a Jujutsu Sorcerer and a third-year student at Tokyo Jujutsu High. He is a rebellious and charismatic person who runs an underground fight club. He is recruited by Yuji Itadori and Megumi Fushiguro to join the Culling Game.'),
+(NULL, 'Kirara',  'Hoshi', 'Kirara Hoshi is a Jujutsu Sorcerer and a third-year student at Tokyo Jujutsu High. She is the girlfriend of Hakari Kinji and helps him with his fight club. She can use her cursed technique to manipulate the movement of people and objects using stars as markers.'),
+(NULL, 'Toji', 'Fushiguro' ,'Toji Fushiguro is a character from the manga and anime series Jujutsu Kaisen, created by Gege Akutami. He is a former member of the Zenin family, one of the three major clans of Jujutsu Sorcerers, and the father of Megumi Fushiguro, one of the main protagonists. He is also known as the Sorcerer Killer, a non-curse user who can assassinate sorcerers and cursed spirits with his exceptional physical abilities and weapons.');
 
 /*Beserk Characters*/
 INSERT INTO characters(heroName, firstName , lastName, description) VALUES

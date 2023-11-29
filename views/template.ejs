@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <div id="container">
+        <div id="item01"><img src="<%= comic.image %>" alt=""></div>
+        <div id="item02"><p>Title: <%= comic.title %></p></div>
+        <div id="item03"><p><%= comic.summary %></p></div>
+        <div id="item04"><p>Price: <%= comic.price %></p></div>
+    </div>
+    <form action="/template" method="post">
+        <input type="hidden" name="comic" value="<%= comic.id %>">
+        <input type="submit" value="AddToCart">
+      </form>
+      <br>
+      <form action="/deleteFromCart" method="post">
+        <input type="hidden" name="comic" value="<%= comic.id %>">
+        <input type="submit" value="DeleteFromCart">
+      </form>
+    
+    
+</body>
+</html>

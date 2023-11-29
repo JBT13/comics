@@ -6,12 +6,11 @@ import { readMangaDc } from '../db/read/mangaDc.js';
 
 const router = express.Router();
 
-const dbFile = path.join(fileURLToPath(new URL(".", import.meta.url)), "../db/users.db");
 const dbFileComic = path.join(fileURLToPath(new URL(".", import.meta.url)), "../db/comics.db");
 // get index page
 // get index page
 router.get('/', (req, res) => {
-	const users = selectUsers(dbFile);
+	const users = selectUsers(dbFileComic);
 	const title = 'Home';
 	const comics = readMangaDc(dbFileComic, 5);
 	let user = '';
@@ -24,7 +23,7 @@ router.get('/', (req, res) => {
   });
   
   router.post('/', (req, res) => {
-	  const users = selectUsers(dbFile);
+	  const users = selectUsers(dbFileComic);
 	  const title = 'Home';
 	  const comics = readMangaDc(dbFileComic, 5);
 	  let user = '';

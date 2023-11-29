@@ -11,6 +11,9 @@ import { router as mangaRouter } from './routes/manga.js';
 import { router as marvelRouter } from './routes/marvel.js';
 import { router as dcRouter } from './routes/dc.js';
 import { router as createComicRouter } from './routes/createComic.js';
+import { router as templateRouter } from './routes/template.js';
+import { router as deleteCartRouter } from './routes/deleteCart.js';
+import { router as cartRouter } from './routes/cart.js';
 
 
 const app = express();
@@ -42,6 +45,9 @@ app.use('/manga', mangaRouter);
 app.use('/marvel', marvelRouter);
 app.use('/dc', dcRouter);
 app.use('/createComic', createComicRouter);
+app.use('/template', templateRouter);
+app.use('/deleteCart', deleteCartRouter);
+app.use('/cart', cartRouter);
 
 
 // errors: page not found

@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  background-color: rgb(122, 127, 131);
+  padding-top: 25vh;
+}
+
+td{
+  font-size: xx-large;
+  color: white;
+}
+
+input {
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(48, 46, 46);
+}
+
+button {
+  background-color: rgb(48, 46, 46);
+  color: white;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 5px 25px;
+}
+
+button:hover {
+  background-color: rgb(110, 79, 79);
+}
+
+h1{
+  position: absolute; left:10px; top:15px;
+  color: white;
+}

@@ -1,19 +1,18 @@
 import express from 'express';
 import path from "path";
 import { fileURLToPath } from "url";
-import { selectUsers } from "../db/read/users.js";
+import { readUser } from "../db/read/user.js";
 import { readCartCount } from '../db/read/cartCount.js';
-
+import { readCart } from '../db/read/cart.js';
 
 const router = express.Router();
 
 const dbFile = path.join(fileURLToPath(new URL(".", import.meta.url)), "../db/comics.db");
 
-// get index page
-// get index page
 router.get('/', (req, res) => {
-	const users = selectUsers(dbFile);
-	const title = 'Home';
+	const users = readUser(dbFile);
+	const title = 'cart';
+	const cart = readCart(dbFile, req.session.user.id)
 	let user = '';
 	let isLoggedIn = false;
 	if (req.session.isLoggedIn) {
@@ -26,7 +25,7 @@ router.get('/', (req, res) => {
 	  cartCount.count = 0;
 	}
 
-	res.render('index', { title, users, user, isLoggedIn, cartCount });
+	res.render('cart', { title, users, user, isLoggedIn, cartCount, cart });
   });
-  
+
   export { router } ;

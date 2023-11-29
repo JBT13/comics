@@ -6,7 +6,7 @@ import { createUsers } from '../db/create/user.js';
 
 const router = express.Router();
 
-const dbFile = path.join(fileURLToPath(new URL('.', import.meta.url)), '../db/users.db');
+const dbFile = path.join(fileURLToPath(new URL('.', import.meta.url)), '../db/comics.db');
 
 // get register page
 router.get('/', (req, res) => {

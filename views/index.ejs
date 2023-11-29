@@ -9,7 +9,7 @@
 <body>
 
   <%- include('navbar.ejs') %>
-  <div>
+  <div class="login">
     <% if (!isLoggedIn) { %>
       <table class="login">
         <tr>
@@ -30,7 +30,9 @@
       <td><a href="/manga"><img src="images/kaisen.jpg" alt=""></a></td>
     </tr>
   </table>
-  
- 
+  <div class="container">
+    <div class="img2"><a href="/cart"><img src="images/cart.webp" alt=""></a></div>
+    <span class="number"><%= cartCount.count  %></span>
+  </div>
 </body>
 </html>

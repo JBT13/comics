@@ -20,14 +20,12 @@
       <% } %>
     </div>
     <div class="container">
-      <form action="/dc">
-        <td>
-          <% for( let i = 0; i < comics.length; i++ ) { %>
-            <button value="<%=  comics[i].id  %>"><img src="<%= comics[i].image %>" alt=""></button>
-          <% } %>
-        </td>
-      </form>
-    </div>
+      <td>
+        <% for( let i = 0; i < comics.length; i++ ) { %>
+          <a href="/template?id=<%= comics[i].comicId %>"><button value="<%=  comics[i].comicId  %>"><img src="<%= comics[i].image %>" alt=""></button></a>
+        <% } %>
+      </td>
+  </div>
     <h1><%= user.firstName %></h1>
 </body>
 </html>

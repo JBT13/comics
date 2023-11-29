@@ -1,0 +1,56 @@
+#container {
+    text-align: center;
+    display: grid; /* Use CSS Grid Layout */
+    grid-template-columns: repeat(4, 1fr); /* Create 3 equal-width columns */
+    grid-template-rows: repeat(5, minmax(100px, auto)); /* Create 4 rows, each with a minimum height of 100px and a maximum height that fits the content */
+    grid-gap: 10px; /* Set the gap between grid cells to 10px */
+    max-width: 900px; /* Set the maximum width of the container to 960px */
+    margin: 0 auto; /* Center the container horizontally */
+    grid-template-areas: 
+      "image image summary summary"
+      "image image summary summary"
+      "image image summary summary"
+      "image image summary summary"
+      "title title price  price";
+  }
+  
+  #item01 {
+    grid-area: image;
+  }
+  
+  #item02 {
+    grid-area: title;
+  }
+  
+  #item03 {
+    grid-area: summary;
+  }
+  
+  #item04 {
+    grid-area: price;
+  }
+
+  body{
+    background-color:rgb(122, 127, 131) ;
+  }
+
+  img{
+    width: 300px;
+    height:400px;
+    padding: 5px 5px 5px ;
+    background-color: white;
+}
+
+img:hover{
+    transform : scale(1.1);
+    filter: brightness(70%);
+}
+
+p{
+    font-size: xx-large;
+    font-family: monospace;
+}
+
+h1{
+  position: absolute; right:10px; bottom:15px;
+}
