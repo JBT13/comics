@@ -8,3 +8,11 @@
     text-align: center;
     padding: 20px;
   }
+
+body{
+  background-color: rgb(122, 127, 131);
+}
+label{
+  font-size: x-large;
+  font-size: monospace;
+}

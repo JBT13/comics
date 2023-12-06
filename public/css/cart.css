@@ -1,0 +1,22 @@
+img {
+  width: 100px;
+  height: 100px;
+  /* Set the margin around the images */
+  margin: 10px;
+  /* Set the border radius to make the images circular */
+  border-radius: 50%;
+  /* Set the border width and color */
+  border: 2px solid black;
+  /* Add a box shadow to the images */
+  box-shadow: 0 0 10px 0 black;
+  background-color: white;
+  padding: 5px 5px 5px ;
+}
+body{
+    background-color: rgb(122, 127, 131);
+}
+td{
+  font-family: monospace;
+  font-size: x-large;
+  padding: 10%;
+}

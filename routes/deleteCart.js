@@ -9,14 +9,25 @@ const router = express.Router();
 
 // get delete page
 router.get('/', (req, res) => {
-  res.redirect('/');
+  let user = '';
+	let isLoggedIn = false;
+	if (req.session.isLoggedIn) {
+	  user = req.session.user;
+	  isLoggedIn = true;
+	}
+  res.render('/');
 });
 
 // post delete page
 router.post('/', (req, res) => {
-  const user = req.session.user;
-  deleteFromCart(dbFile, user, req.body.comic);
-  res.redirect('/movies');
+  let user = '';
+	let isLoggedIn = false;
+	if (req.session.isLoggedIn) {
+	  user = req.session.user;
+	  isLoggedIn = true;
+    deleteFromCart(dbFile, user.id, req.body.cart);
+    res.redirect('/');
+	}
 });
 
 export { router } ;

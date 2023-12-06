@@ -24,7 +24,6 @@ router.get('/', (req, res) => {
 	  cartCount = {};
 	  cartCount.count = 0;
 	}
-
 	res.render('cart', { title, users, user, isLoggedIn, cartCount, cart });
   });
 

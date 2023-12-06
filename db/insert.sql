@@ -7,6 +7,9 @@ INSERT INTO publishers (name) VALUES
 INSERT INTO publishers (name) VALUES
 ('Kodansha')
 
+INSERT INTO publishers (name) VALUES
+('DC Comics Universe')
+
 INSERT INTO countries (name) VALUES
 ('USA'),('Latvia')
 
@@ -31,6 +34,24 @@ INSERT INTO people (firstName, lastName, birth) VALUES
 
 INSERT INTO people (firstName, lastName, birth) VALUES 
 ('Hajime','Isayama','1986-08-29')
+
+INSERT INTO people (firstName, lastName, birth) VALUES 
+('Muneyuki', 'Kaneshiro', '1998-04-12'),
+('Yuusuke', 'Nomura', '1999-07-23');
+
+INSERT INTO people (firstName, lastName, birth) VALUES 
+('Shuichi', 'Shigeno', '1958-03-08');
+
+INSERT INTO people (firstName, lastName, birth) VALUES 
+('Yutaka', 'Nanten', '1969-11-14');
+
+INSERT INTO people (firstName, lastName, birth) VALUES 
+('Kohei', 'Horikoshi', '1986-11-20');
+
+INSERT INTO people (firstName, lastName, birth) VALUES
+('J. Michael', 'Straczynski', '1954-07-17');
+
+
 
 
 
@@ -128,6 +149,13 @@ INSERT INTO characters(heroName, firstName , lastName, description) VALUES
 (NULL, 'Uncle Ben', 'Parker', 'Although Uncle Ben is no longer alive in the main continuity, his influence on Peters sense of responsibility is a central theme in Spider-Mans origin story.'),
 (NULL, 'George', 'Stacy', 'The father of Gwen Stacy and a police captain who knew Peter Parkers secret.')
 
+INSERT INTO characters (heroName,firstName, lastName, description) VALUES
+('Circus of Crime',NULL,NULL,'They would give a performance before a large audience. At some point the Ringmaster would use the powerful mind-control device concealed in his hat to put the audience into a trance. The Circus members then robbed the audience, who would remember nothing about the thefts when the Ringmaster released them from the trance and the performance continued.'),
+('Doctor Doom','Victor von','Doom','Doctor Doom is a Latverian politician who serves as the Monarch and Supreme Leader for the Kingdom of Latveria. He was scarred from an accident and wears an iron mask and armor to hide his true face. He is considered one of the most brilliant minds and scientists on the planet Earth. He is also a sorcerer with skills in magic matching the most powerful beings in the Universe, making him a potential candidate for Sorcerer Supreme.He hopes to bring order and betterment to humanity through world conquest.'),
+('Living Brain (Earth-616)',NULL,NULL,'The Living Brain, soon after its creation, was brought to Midtown High School by its creator, Dr. Petty, as a part of a demonstration of its ability to solve any problem.'),
+('Doctor Strange','Stephen','Strange','Dr. Stephen Strange,a.k.a. Doctor Strange, was the Sorcerer Supreme for Earth-616. Strange was once a brilliant but arrogant Neurosurgeon, until a car accident crippled his hands.When modern medicine failed him, he embarked on a journey to Kamar-Taj in Tibet, where he was trained by the Ancient One. He healed his hands and learned more about Magic, eventually becoming a Master of the Mystic Arts.')
+
+
 The Amazing Spider-Man (1963-2014, 2015-present)
 The Spectacular Spider-Man (1976-1998, 2003-2005, 2017)
 Web of Spider-Man (1985-1995, 2009-2010)
@@ -142,16 +170,11 @@ Spidey (2015-2016)
 Peter Parker: The Spectacular Spider-Man (2017-2018)
 
 
-INSERT INTO characters (heroName,firstName, lastName, description) VALUES
-('Circus of Crime',NULL,NULL,'They would give a performance before a large audience. At some point the Ringmaster would use the powerful mind-control device concealed in his hat to put the audience into a trance. The Circus members then robbed the audience, who would remember nothing about the thefts when the Ringmaster released them from the trance and the performance continued.'),
-('Doctor Doom','Victor von','Doom','Doctor Doom is a Latverian politician who serves as the Monarch and Supreme Leader for the Kingdom of Latveria. He was scarred from an accident and wears an iron mask and armor to hide his true face. He is considered one of the most brilliant minds and scientists on the planet Earth. He is also a sorcerer with skills in magic matching the most powerful beings in the Universe, making him a potential candidate for Sorcerer Supreme.He hopes to bring order and betterment to humanity through world conquest.'),
-('Living Brain (Earth-616)',NULL,NULL,'The Living Brain, soon after its creation, was brought to Midtown High School by its creator, Dr. Petty, as a part of a demonstration of its ability to solve any problem.'),
-('Doctor Strange','Stephen','Strange','Dr. Stephen Strange,a.k.a. Doctor Strange, was the Sorcerer Supreme for Earth-616. Strange was once a brilliant but arrogant Neurosurgeon, until a car accident crippled his hands.When modern medicine failed him, he embarked on a journey to Kamar-Taj in Tibet, where he was trained by the Ancient One. He healed his hands and learned more about Magic, eventually becoming a Master of the Mystic Arts.')
 
 
 /* Spiderman (616)*/ 
 INSERT INTO comics (title, pageNumber, ISBN, issueNumber, publicationDate, summary) VALUES 
-('The Amazing Spider-Man #1', 25, '978-0-7851-8550-8', 1, 'March 1963', 'Spider-Man battles the Chameleon and joins the Fantastic Four'), 
+('', , '', , 'March 1963', 'Spider-Man battles the Chameleon and joins the Fantastic Four'), 
 ('The Amazing Spider-Man #2', 24, '978-0-7851-8550-8', 2, 'May 1963', 'Spider-Man faces the Vulture and the Tinkerer'), 
 ('The Amazing Spider-Man #3', 22, '978-0-7851-8550-8', 3, 'July 1963', 'Spider-Man meets his match in Doctor Octopus'), 
 ('The Amazing Spider-Man #4', 24, '978-0-7851-8550-8', 4, 'September 1963', 'Spider-Man encounters the Sandman and Betty Brant'), 
@@ -234,6 +257,9 @@ INSERT INTO characters(heroName, firstName , lastName, description) VALUES
 (NULL, 'Kirara',  'Hoshi', 'Kirara Hoshi is a Jujutsu Sorcerer and a third-year student at Tokyo Jujutsu High. She is the girlfriend of Hakari Kinji and helps him with his fight club. She can use her cursed technique to manipulate the movement of people and objects using stars as markers.'),
 (NULL, 'Toji', 'Fushiguro' ,'Toji Fushiguro is a character from the manga and anime series Jujutsu Kaisen, created by Gege Akutami. He is a former member of the Zenin family, one of the three major clans of Jujutsu Sorcerers, and the father of Megumi Fushiguro, one of the main protagonists. He is also known as the Sorcerer Killer, a non-curse user who can assassinate sorcerers and cursed spirits with his exceptional physical abilities and weapons.');
 
+INSERT INTO characters(heroName, firstName, lastName, description)
+VALUES ('The King of Curses', 'Sukuna', 'Ryomen', 'The King of Curses and the primary antagonist of Jujutsu Kaisen');
+
 /*Beserk Characters*/
 INSERT INTO characters(heroName, firstName , lastName, description) VALUES
 ('Black Swordsman', 'Guts', NULL, 'Guts is a lone mercenary warrior who wields a massive sword and seeks revenge on Griffith, who betrayed him and his comrades.'),
@@ -266,22 +292,72 @@ INSERT INTO characters(heroName, firstName , lastName, description) VALUES
 (NULL,'Sasha', 'Blouse', 'A former member of the Scout Regiment and a close friend of Connie, Jean, Mikasa, and Armin. She was known for her love of food and her exceptional skills with a bow and arrow. She was brave and compassionate, but also had a humorous side. She died after being shot by Gabi during the raid on Liberio.'),
 (NULL,'Kenny', 'Ackerman', 'The uncle of Levi and the former captain of the Anti-Personnel Control Squad. He was a serial killer known as Kenny the Ripper who killed hundreds of Military Police officers. He was also a friend of Uri Reiss and sought to obtain the Founding Titan power for himself. He died after giving Levi a Titan serum that he stole from Rod Reiss.')
 
+INSERT INTO characters(heroName, firstName, lastName, description) VALUES 
+(NULL, 'Yoichi', 'Isagi', 'The main protagonist of Blue Lock who plays as a striker'),
+(NULL, 'Jinpachi', 'Ego', 'The coach of the Blue Lock project who aims to create the best striker in the world'),
+(NULL, 'Rin', 'Itoshi', 'The captain of Team Z and a genius playmaker who can manipulate the ball with his mind'),
+(NULL, 'Shidou', 'Nagi', 'A striker from Team Z who has a rivalry with Yoichi Isagi'),
+(NULL, 'Meguru', 'Bachira', 'A striker from Team Z who has a keen sense of smell and can track the ball and the opponents'),
+(NULL, 'Hyoma', 'Chigiri', 'A striker from Team V who has a powerful left foot and can shoot from any angle'),
+(NULL, 'Rensuke', 'Kunigami', 'A striker from Team K who has a wild and aggressive playstyle and can overwhelm the defenders');
 
-INSERT INTO series(name, description) VALUES 
-('Jujutsu Kaisen','A popular anime and manga series by Gege Akutami. The name Jujutsu Kaisen means “Sorcery Fight” in Japanese, and it refers to the battles between the Jujutsu Sorcerers and the Curses, which are evil spirits born from human negativity. The series follows the adventures of Yuji Itadori, a high school student who accidentally swallows a cursed finger that belongs to Ryomen Sukuna, the King of Curses.'),
-('Beserk','Berserk is a dark fantasy manga series by Kentaro Miura that has been serialized since 1989. It has also been adapted into several anime series and movies. The story follows Guts, a mercenary who wields a massive sword and has a cursed mark that attracts evil spirits. He seeks revenge against Griffith, his former friend and leader of the Band of the Hawk, who betrayed him and sacrificed his comrades to become a demonic being called Femto. Along his journey, he encounters various allies and enemies, as well as supernatural creatures and events.'),
-('Spider-Man','Its a collection of movies, TV shows, comics, and games that feature the superhero Spider-Man, who is a young man named Peter Parker who gains spider-like abilities after being bitten by a radioactive spider. He uses his powers to fight crime and protect his city from various villains, while also dealing with his personal life and relationships.')
+INSERT INTO characters(heroName, firstName, lastName, description) VALUES 
+(NULL, 'Takumi', 'Fujiwara', 'The main protagonist and a high school student who delivers tofu for his fathers shop using his fathers Toyota Sprinter Trueno AE86. He is a natural-born racer who can drift with ease and speed.'),
+(NULL, 'Bunta', 'Fujiwara', 'Takumis father and the owner of the Fujiwara Tofu Shop. He is a former street racer who taught Takumi how to drive and secretly tuned his AE86.'),
+(NULL, 'Itsuki', 'Takeuchi', 'Takumis best friend and a member of the Akina Speed Stars, a local racing team. He drives a Toyota Corolla Levin SR (AE85) and idolizes Takumi.'),
+(NULL, 'Koichiro', 'Iketani', 'The leader of the Akina Speed Stars and a part-time employee at a gas station. He drives a Nissan Silvia Ks (S13) and is friendly and helpful to Takumi and Itsuki.'),
+(NULL, 'Kenji', NULL, 'Another member of the Akina Speed Stars and a friend of Iketani. He drives a Nissan 180SX Type II (RPS13) and is often seen hanging out with Iketani and Itsuki.'),
+(NULL, 'Natsuki', 'Mogi', 'Takumis classmate and love interest. She is a beautiful and popular girl who works part-time at a karaoke bar. She has a mysterious relationship with an older man named Papa.'),
+(NULL, 'Keisuke', 'Takahashi', 'The number two driver of the Red Suns, a rival racing team from Akagi. He drives a Mazda RX-7 (FD3S) and is confident and arrogant. He challenges Takumi to a race after losing to him in a downhill battle.'),
+(NULL, 'Ryosuke', 'Takahashi', 'The leader and number one driver of the Red Suns. He drives a Mazda RX-7 (FC3S) and is known as the White Comet of Akagi. He is calm and analytical and respects Takumis skills.'),
+(NULL, 'Yuichi', 'Tachibana', 'The manager of the gas station where Iketani works. He is a former street racer who knows Bunta and gives advice to Takumi and Itsuki.'),
+(NULL, 'Hiroshi', 'Fumihiro', 'The owner of the Night Kids, another rival racing team from Myogi. He drives a Nissan Skyline GT-R V-Spec II (BNR32) and is ruthless and aggressive. He challenges Takumi to a race after hearing about his reputation.');
 
-INSERT INTO series(name, description) VALUES 
-('Attack on Titan', 'A Japanese manga and anime series that depicts a world where humans are threatened by giant humanoids called Titans. The story follows Eren Yeager, who inherits the power of the Attack Titan, a special Titan that can see into the future and connect with other Titan holders. Eren decides to use his power to destroy humanity, believing that they are the cause of the Titans suffering.');
+INSERT INTO characters(heroName, firstName , lastName, description) VALUES
+('Spike Spiegel', 'Spike', 'Spiegel', 'the main protagonist and a bounty hunter who travels the solar system in his spaceship, the Bebop. He is a former member of the Red Dragon Syndicate, a criminal organization, and has a rivalry with his former partner, Vicious. He is skilled in martial arts and firearms and has a laid-back and sarcastic personality.'),
+('Jet Black', 'Jet', 'Black', 'the owner of the Bebop and a former officer of the Inter Solar System Police (ISSP). He is Spike’s partner and friend and acts as the leader of the crew. He is a reliable and pragmatic man who lost his left arm in an incident involving a corrupt cop.'),
+('Faye Valentine', 'Faye', 'Valentine', 'a femme fatale and a bounty hunter who joins the Bebop crew after being rescued by Spike and Jet. She is a con artist and a gambler who has a large debt and a mysterious past. She is selfish and cynical, but also shows a softer side at times.'),
+('Edward Wong Hau Pepelu Tivrusky IV', 'Edward', 'Wong', 'a young and eccentric hacker who goes by the name Ed. She is a genius with computers and hacking and often helps the Bebop crew with their bounties. She is cheerful and energetic, but also unpredictable and quirky. She has a pet dog named Ein, who is a data dog with enhanced intelligence.'),
+('Vicious', 'Vicious', NULL, 'the main antagonist and a ruthless leader of the Red Dragon Syndicate. He is Spike’s former partner and friend, but they became enemies after a betrayal involving a woman named Julia. He is cold and cruel and wields a katana as his weapon of choice.');
+
+INSERT INTO characters(heroName, firstName , lastName, description) VALUES
+('Deku','Izuku','Midoriya','He is the main protagonist of the series and a student at U.A. High School. He was born without a Quirk, which is a superpower that most people have in this world. However, he inherited the Quirk of his idol, All Might, which is called One For All. This Quirk allows him to stockpile and transfer a massive amount of physical strength and energy. He is a kind, brave, and determined hero who always strives to improve himself and help others.'),
+('All Might','Toshinori','Yagi','He is the former No. 1 Hero and the symbol of peace in this world. He was the previous wielder of One For All, which he passed on to Deku. His Quirk allows him to transform into a muscular and powerful form that can perform incredible feats of strength and speed. He is a cheerful, charismatic, and inspiring hero who acts as a mentor and father figure to Deku and other young heroes.'),
+('Kacchan','Katsuki','Bakugo','He is Dekus childhood friend and rival. He is a student at U.A. High School and one of the most talented and promising heroes in his class. His Quirk is called Explosion, which allows him to create and manipulate explosions from his sweat. He is a proud, aggressive, and competitive hero who has a strong desire to win and surpass everyone, especially All Might and Deku.'),
+('Uravity','Ochaco','Uraraka','She is a student at U.A. High School and one of Dekus closest friends. Her Quirk is called Zero Gravity, which allows her to make herself or anything she touches float in the air. She is a sweet, cheerful, and optimistic hero who wants to earn money to support her family and make the world a happier place'),
+('Ingenium ','Tenya','Iida','He is a student at U.A. High School and the class president of Class 1-A. His Quirk is called Engine, which allows him to run at superhuman speeds with the help of jet engines in his legs. He is a smart, loyal, and responsible hero who follows the rules and values honor and justice. He is also the younger brother of a famous hero, Tensei Iida, who was injured by a villain.'),
+('Shoto','Shoto','Todoroki','He is a student at U.A. High School and the son of the current No. 1 Hero, Endeavor. His Quirk is called Half-Cold Half-Hot, which allows him to generate and manipulate ice from his right side and fire from his left side. He is a calm, stoic, and powerful hero who has a complicated relationship with his father and struggles to find his own identity and path.');
+
+INSERT INTO characters(heroName, firstName, lastName, description) VALUES
+('Iron Man', 'Tony', 'Stark', 'A genius, billionaire, playboy, philanthropist who wears a high-tech suit of armor'),
+('Captain America', 'Steve', 'Rogers', 'A super-soldier who fought in World War II and was frozen for decades'),
+('Thor', 'Thor', 'Odinson', 'The god of thunder and the heir of Asgard');
+
+-- INSERT INTO characters(heroName, firstName , lastName, description) VALUES
+INSERT INTO characters(heroName, firstName , lastName, description) VALUES
+('Deadpool', 'Wade', 'Wilson', 'A wisecracking mercenary with a healing factor and a penchant for breaking the fourth wall.');
+
+INSERT INTO characters(heroName, firstName , lastName, description) VALUES
+('Batman', 'Bruce', 'Wayne', 'A billionaire vigilante who fights crime in Gotham City using his intellect, gadgets, and martial arts skills.'),
+('Joker', NULL, NULL, 'A psychotic clown and the archenemy of Batman who commits crimes for his own amusement and chaos.'),
+('The Batman Who Laughs', 'Bruce', 'Wayne', 'A twisted version of Batman from the Dark Multiverse who was infected by the Joker toxin and became a sadistic leader of the Dark Knights.'),
+('The Grim Knight', 'Bruce', 'Wayne', 'A ruthless version of Batman from the Dark Multiverse who uses guns and lethal weapons to kill his enemies.'),
+('The Devastator', 'Bruce', 'Wayne', 'A monstrous version of Batman from the Dark Multiverse who injected himself with the Doomsday virus to fight Superman.'),
+('The Merciless', 'Bruce', 'Wayne', 'A warlike version of Batman from the Dark Multiverse who wore the helmet of Ares and became the god of war.'),
+('The Drowned', 'Bryce', 'Wayne', 'A female version of Batman from the Dark Multiverse who was transformed into an amphibious creature and waged war against the Atlanteans.'),
+('The Dawnbreaker', 'Bruce', 'Wayne', 'A corrupted version of Batman from the Dark Multiverse who wielded a power ring and used it to create darkness and fear.'),
+('The Red Death', 'Bruce', 'Wayne', 'A speedster version of Batman from the Dark Multiverse who merged with the Flash and stole his powers.'),
+('The Murder Machine', 'Bruce', 'Wayne', 'A cyborg version of Batman from the Dark Multiverse who was infected by an AI version of Alfred Pennyworth and became a killing machine.');
 
 
 INSERT INTO series(name, description) VALUES 
 ('Manga', 'A type of Japanese comic book or graphic novel that is usually serialized and has a distinctive art style.')
 
-
 INSERT INTO series(name, description) VALUES 
 ('DC', 'A comic book publisher that features a shared universe of superheroes, villains, and other characters.')
+
+INSERT INTO series(name, description) VALUES 
+('Marvel', 'A type of American comic book or media franchise that features superheroes and villains from a shared universe.')
 
 INSERT INTO comicCountry (comicId, countryId) VALUES
 (1,1),(2,1),(3,1)
@@ -292,7 +368,7 @@ INSERT INTO comicGenre (comicId, genreId) VALUES
 (3,1),(3,2),(3,3),(3,12)
 
 INSERT INTO comicSerie (comicId, serieId) VALUES
-(1,1),(2,1),(3,1)
+(1,3),(2,3),(3,3)
 
 INSERT INTO comicCharacter (comicId, characterId) VALUES
 (1,1),(1,2),(1,3),(1,4)
@@ -301,7 +377,6 @@ INSERT INTO comicPeopleRole (comicId, peopleId, roleId) VALUES
 (1,1,9),(1,2,3),
 (2,3,9),(2,4,3),(2,5,6),(2,6,6),
 (3,8,9),(3,9,3)
-
 
 INSERT INTO peopleCountry (peopleId, countryId) VALUES
 (1,1),(2,1),(3,1),(4,2),(5,1),(6,1),(7,1),(8,1),(9,1)
@@ -360,7 +435,7 @@ FROM
        GROUP BY series.id
        ORDER BY series.name;
 
-SELECT people.id, people. firstName, people. lastName
+SELECT people.id, people.firstName, people.lastName
 FROM people INNER JOIN comicPeopleRole
-ON people.id = comicPeopleRole.peopleID
-WHERE comicPeopleRole.roleID = 9;
+ON people.id = comicPeopleRole.peopleId
+WHERE comicPeopleRole.roleId = 9;

@@ -12,7 +12,7 @@ const dbFileComic = path.join(fileURLToPath(new URL(".", import.meta.url)), "../
 router.get('/', (req, res) => {
 	const users = selectUsers(dbFileComic);
 	const title = 'Home';
-	const comics = readMangaDc(dbFileComic, 5);
+	const comics = readMangaDc(dbFileComic, 1);
 	let user = '';
 	let isLoggedIn = false;
 	if (req.session.isLoggedIn) {
@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
   router.post('/', (req, res) => {
 	  const users = selectUsers(dbFileComic);
 	  const title = 'Home';
-	  const comics = readMangaDc(dbFileComic, 5);
+	  const comics = readMangaDc(dbFileComic, 1);
 	  let user = '';
 	  let isLoggedIn = false;
 	  if (req.session.isLoggedIn) {

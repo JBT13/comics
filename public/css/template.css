@@ -54,3 +54,19 @@ p{
 h1{
   position: absolute; right:10px; bottom:15px;
 }
+
+form{
+  text-align: center; 
+}
+input[type=submit] { 
+  width: 100px; 
+  height: 30px; 
+  font-size: 16px; 
+  color: white; 
+  background-color: rgb(110, 79, 79); 
+  border: none; cursor: pointer; 
+}
+
+input[type=submit]:hover { 
+  background-color: rgb(110, 79, 79); 
+}
